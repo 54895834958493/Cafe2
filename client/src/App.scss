@@ -1,0 +1,452 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  background: #fff;
+  color: black;
+  font-family: 'Playfair Display';
+  margin-bottom: 100%;
+}
+
+.d-block{
+  width: 37%;
+    height: 900px;
+    /* display: inline-block; */
+   
+    /* position: absolute; */
+    right: 0%;
+    float: right;
+}
+
+.regis{
+  width: 35px;
+  height: 35px;
+}
+.basket{
+  width: 47px;
+  height: 46px;
+}
+
+
+.image-container {
+  display: flex;
+  overflow-x: hidden;
+  width: 100%; 
+  position: relative; 
+  overflow: hidden;
+}
+
+
+.desert, .desert1, .desert2, .desert3 {
+  flex: 0 0 auto;
+  animation: scroll-left 10s linear infinite; 
+  margin-right: 41px;
+  margin-bottom: 45px;
+  width: 450px; 
+  height: 450.56px;  
+}
+
+@keyframes scroll-left {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+
+.desert4, .desert5, .desert6, .desert7 {
+  flex: 0 0 auto;
+  animation: scroll-right 10s linear infinite;
+  margin-right: 41px;
+  width: 450px; 
+  height: 450.56px;
+}
+
+@keyframes scroll-right {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(100%); }
+}
+
+
+
+.cofee{
+  width: 25%;
+  height: 25%;
+  margin-top: -11%;
+  margin-left: 50%;
+}
+
+.about-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  clear: both;
+  text-align: left;
+  background: white;
+  padding: 20px; /* Добавьте отступы для лучшего вида */
+}
+
+.text-container {
+  width: 47%;
+}
+
+.title {
+  color: black;
+  font-size: 56px;
+  font-family: 'Alice', serif;
+  margin-bottom: 20px;
+}
+
+.description {
+  color: black;
+  font-size: 27px;
+  font-family: 'Playfair Display', serif;
+}
+
+.image-container1 {
+  position: relative;
+  width: 30%;
+  height: 500px; /* Установите высоту контейнера для анимации */
+  overflow: hidden; 
+}
+
+.macar, .macar2, .macar3, .macar4, .macar5 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0; 
+  animation: fadeInOut 11s infinite; /* Анимация: 8 секунд, бесконечный цикл */
+}
+
+.macar {
+  animation-delay: 0s; /* Начало анимации 'macar' */
+}
+
+.macar2 {
+  animation-delay: 1s; /* Начало анимации 'mafin' через 4 секунды */
+}
+
+.macar3 {
+  animation-delay: 2s; /* Начало анимации 'mafin' через 4 секунды */
+}
+
+.macar4 {
+  animation-delay: 3s; /* Начало анимации 'mafin' через 4 секунды */
+}
+
+.macar5 {
+  animation-delay: 4s; /* Начало анимации 'mafin' через 4 секунды */
+}
+
+@keyframes fadeInOut {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+
+ main{
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+ }
+
+.mr-auto{
+  position: relative;
+}
+
+ main .item{
+  margin-left: 2%;
+  margin-right: 2%;
+  width: 27%;
+  margin-bottom: 50px;
+  background: #ffffff;
+  overflow: hidden;
+  position: relative;
+  padding-bottom: 20px;
+  border: 7px solid #C17079;
+ }
+
+ main .item img {
+  width: 100%;
+  transition: transform 500ms ease;
+ }
+
+ main h5, main b{
+  font-family: Playfair Display;
+  font-size: 30px;
+  margin: 10px 20px;
+  color: #333;
+ }
+ 
+
+ main .add-to-cart{
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  text-align: center;
+  background: #C17079;
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  color: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+  font-weight: 600;
+  transition: transform 500ms ease;
+ }
+
+ main .add-to-cart:hover{
+  transform: scale(1.5) translateY(-5px);
+ }
+
+  main .item img:hover{
+    transform: scale(1.05);
+  }
+
+  .shop{
+    width: 50px;
+    height: 50px;
+    margin-top: -2%;
+    cursor: pointer;
+    transition: color, transform 500ms ease;
+  }
+
+  .shop:hover,
+  .shop.active{
+    color: #C17079;
+    transform: scale(1.5);
+  }
+
+  .shop-cart{
+    position: absolute;
+    top: 56px;
+    right: 0;
+    width: 450px;
+    background: #C1707961;
+    -webkit-box-shadow: 4px 5px 15px -7px #000000; 
+    box-shadow: 4px 5px 15px -7px #000000;
+    z-index: 1000;
+
+    padding: 20px;
+    padding-bottom: 0;
+  }
+  .shop-cart .item .empty h5 {
+    font-size: 15px;
+    margin-bottom: 20px;
+  }
+
+  .shop-cart .item .delete-icon {
+    color: #ffffff;
+    float: right;
+    position: relative;
+    top: -25px;
+    cursor: pointer;
+    transition: color, transform 500ms ease;
+  }
+
+  .shop-cart .item .delete-icon:hover {
+    color: #ff0000;
+    transform: scale(1.5);
+  }
+
+  .shop-cart .summa {
+    float: left;
+    width: 100%;
+    font-weight: 600;
+    font-size: 18px;  
+    margin-bottom: 20px;
+  }
+
+  .shop-cart .item{
+    width: 100%;
+    float: left;
+    margin-bottom: 20px;
+  }
+
+  .shop-cart .item img{
+    width: 70px;
+    float: left;
+    margin-right: 20px;
+
+  }
+
+  .shop-cart .item h5 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  .shop-cart .item p{
+    color: #333;
+    font-weight: 600;
+  }
+
+  .booking-form {
+    font-family: "Playfair Display";
+    width: 400px;
+    margin: 10px auto; 
+    padding: 20px;
+    margin-bottom: 10px;
+    border: 1px solid #C17079;
+    border-radius: 15px;
+    box-shadow: 3px 3px 10px #C17079
+  }
+  
+  .booking-form label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .booking-form input,
+  .booking-form textarea,
+  .booking-form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #000000;
+    border-radius: 3px;
+    box-sizing: border-box;
+  }
+  
+  .booking-form button {
+    background-color: #C17079;
+    color: rgb(255, 255, 255);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    display: block; 
+    margin: 0 auto;
+  }
+  
+  .menu-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .menu-title {
+    font-size: 2.5rem;
+    font-family: 'Playfair Display';
+    margin-bottom: 1rem;
+  }
+  
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%; /* Занимаем всю ширину экрана */
+  }
+  
+  .item {
+    width: calc(50% - 20px); /* Ширина элемента с учетом отступов */
+    margin: 10px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+    box-sizing: border-box; /* Чтобы padding и border не влияли на ширину */
+    min-width: 150px; /* Минимальная ширина элемента на маленьком экране */
+  }
+  
+  .item img {
+    width: 100%;
+    max-height: 370px;
+    object-fit: cover;
+    margin-bottom: 10px;
+  }
+  
+  .add-to-cart {
+    cursor: pointer;
+    padding: -1px 15px;
+    background-color: #C17079;
+    color: white;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+  
+  /* Media query for smaller screens */
+  @media (max-width: 768px) { 
+    .item {
+      width: calc(100% - 20px); /* Изменяем ширину элементов на меньших экранах */
+    }
+  }
+
+  .registration-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4; 
+  }
+  
+  .registration-form {
+    width: 400px;
+    padding: 30px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 3px 3px 10px #C17079 
+  }
+  
+  .registration-form h4 {
+    margin-bottom: 20px;
+  }
+  
+  .registration-form .MuiTextField-root {
+    margin-bottom: 15px;
+  }
+  
+  .registration-form .MuiButton-contained {
+    background-color: #e17396; 
+    color: white;
+    padding: 12px 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+    display: block; 
+    margin-left: auto; 
+    margin-right: auto; 
+  }
+  
+  
+  .registration-form a {
+    color: #e17396;
+    text-decoration: none;
+  }
+
+  
+  .login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    background-color: #f4f4f4; 
+  }
+  
+  .login-form {
+    width: 400px;
+    padding: 30px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+     box-shadow: 3px 3px 10px #C17079 /* Тень */ 
+  }
+  
+  .login-form .MuiButton-contained {
+    background-color: #e17396; 
+    color: white;
+    padding: 12px 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+    display: block; 
+    margin-left: auto; 
+    margin-right: auto; 
+  }
+  
+  .login-form a {
+    color: #e17396;
+    text-decoration: none;
+  }
+  

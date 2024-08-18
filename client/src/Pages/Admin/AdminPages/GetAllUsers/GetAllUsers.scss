@@ -1,0 +1,41 @@
+@media (max-width: 767px) {
+    .user-table th,
+    .user-table td {
+      font-size: 12px;
+    }
+  }
+  
+.table-container {
+    overflow-x: auto;
+    margin: 20px auto; 
+    width: 80%; 
+    margin-bottom: 70px;
+  }
+  
+  .user-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px; 
+  }
+  
+  .user-table th,
+  .user-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .user-table tr:nth-child(even) {
+    background-color: #f2f2f2; 
+  }
+  .table-information{
+    background-color: #f2f2f2; 
+  }
+
+  .manage-name-title-users{
+    margin-bottom: 50px;
+    margin-top: 30px;
+  }
+.users-alert{
+  font-size: 22px;
+}

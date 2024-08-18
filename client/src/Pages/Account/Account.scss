@@ -1,0 +1,279 @@
+@mixin transition-block {
+    transition: 0.3s all ease-in-out;
+  }
+  
+@mixin flexStart {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+@mixin input-header-flex{
+    &-header{
+        align-items: baseline;
+        display: flex;
+        margin-bottom: 30px;
+    }
+    &-inputs {
+        margin-bottom: 40px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    &-block {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin: 15px 0;
+    & p {
+         text-transform: uppercase;
+    }
+}
+
+    &-input {
+        width: 255.5px;
+        height: 36px;
+    }
+}
+  
+@media (max-width: 8550px) {
+
+    .address-information-inputs{
+        width: 730px;
+    
+    }
+    .personal-information-inputs{
+        width: 730px;
+    
+    }
+
+    .account-page-content{
+        &-right{
+            width: 700px;
+            margin-left: 100px;
+        }
+        &-left{
+            align-items: flex-start;
+        }
+    }
+    
+}
+
+@media (max-width: 1300px) {
+
+.account-page-content{
+    justify-content: center;
+    flex-direction: column-reverse;
+    &-right{
+        margin: 0;
+    }
+    &-left{
+        width: 730px;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 30px;
+        width:100%;
+    }
+}
+  
+}
+
+@media (max-width: 940px) {
+    .account-page-content-right{
+        width: 323px;
+        display: flex;
+        justify-content: center;
+    }
+    .account-page-content-left{
+        align-items: center;
+    }
+
+
+    .personal-information{
+        justify-content: center;
+        &-block{
+            width: 256px;
+        }
+        &-inputs{
+            flex-direction: column;
+            width: 256px;
+        }
+    }
+    .address-information-inputs{
+        flex-direction: column;
+        justify-content: center;
+        width: 256px;
+    }
+}
+
+@media (max-width: 280px) {
+    .account-page-content-right{
+        width: 270px;
+        display: flex;
+        justify-content: center;
+    }
+    .account-page-content-left{
+        align-items: center;
+    }
+
+
+    .personal-information{
+        justify-content: center;
+        &-block{
+            width: 256px;
+        }
+        &-inputs{
+            flex-direction: column;
+            width: 256px;
+        }
+        &-header{
+            flex-direction: column;
+            gap: 10px;
+        }
+    }
+    .address-information-inputs{
+        flex-direction: column;
+        justify-content: center;
+        width: 256px;
+    }
+}
+
+
+
+
+.user-information-input{
+    background-color: inherit;
+    color: rgba(0, 0, 0, 0.75);
+    padding: 25px 0 15px;
+    height: 36px;
+    width: 255px;
+    font-size: 20px;
+    outline: none;
+    border: none;
+    border-bottom: 5px solid rgba(194, 32, 156, 0.1);
+    &.active{
+        color: rgb(0, 0, 0);
+    }
+}
+
+.button-save-information{
+    height: 50px;
+    width: 266px;
+    color: white;
+    background-color: black;
+    font-size: 20px;
+    border: none;
+    margin-top: 30px;
+    transition: 0.3s all;
+    cursor: pointer;
+    display: block;
+    &:hover {
+        background-color: rgba(0, 0, 0, 0.746);
+    }
+    &-hidden{
+        display: none;
+    }
+}
+
+.account-page-wrapper {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 70px;
+}
+
+.account-page-title {
+    margin-top: 50px;
+    text-align: center;
+    width: 100%;
+}
+
+.account-page-content-right {
+    @include flexStart;
+    flex-direction: column;
+}
+
+
+.account-page-content {
+    margin-top: 50px;
+    height: 100%;
+    display: flex;
+  
+    .my-orders-button{
+        height: 50px;
+        width: 266px;
+        background: black;
+        color: white;
+        font-size: 20px;
+        border: none;
+        transition: .3s all;
+        cursor: pointer;
+    &:hover {
+        background-color: rgba(0, 0, 0, 0.746);
+    }
+
+    }
+    &-left {
+      display: flex;
+      flex-direction: column;
+  } 
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0; 
+}
+
+.address-information{
+    display: flex;
+    margin-bottom: 15px;
+    align-items: baseline;
+    flex-direction: column;
+    @include input-header-flex;
+   
+}
+
+.personal-information{
+    margin-bottom: 50px;
+    justify-content: center;
+    @include flexStart;
+    @include input-header-flex;
+}  
+
+.log-out {
+    height: 50px;
+    width: 266px;
+    background: #c17079;
+    color: white;
+    font-size: 20px;
+    border: none;
+    margin-top: 30px;
+    transition: .3s all;
+    cursor: pointer;
+    &:hover {
+        background-color: #e56171;
+    }
+}
+
+.main-data-header {
+    font-weight: 300;
+    white-space: nowrap;
+}
+
+.button-change-data {
+    height: 100%;
+    color: gray;
+    margin-left: 15px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    transition: .3s all;
+
+&:hover {
+    opacity: .5;
+}
+}
